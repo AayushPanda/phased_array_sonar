@@ -60,6 +60,6 @@ byte counter = 0;
 ISR(TIMER2_COMPA_vect){
   PORTA = phases[counter];
   counter++;
-  if( counter >= 13*6 + 16*6)
+  if( counter >= 13*9 + 16*6)
     counter = 0;
 }
