@@ -1,0 +1,6 @@
+{
+    "sketch": "phased_array_sonar_v3.7.ino",
+    "port": "COM7",
+    "board": "arduino:avr:mega",
+    "configuration": "cpu=atmega2560"
+}

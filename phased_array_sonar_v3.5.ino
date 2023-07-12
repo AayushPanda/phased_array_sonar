@@ -50,12 +50,7 @@ void setup()
   // }
   genPSSignal(phases, 0);
 
-  enableBits = B11111111;   // turn all channels on.
-  Serial.begin(9600);
-  for( int i=0; i<=7; i++)
-  {
-    pinMode( i, OUTPUT);
-  }
+  DDRB = B11111111;         // set all pins on port B to output
 
   
   // Use Timer2 for interrupts.
@@ -83,7 +78,7 @@ ISR(TIMER2_COMPA_vect)
   // At 40kHz, every little piece of code matters.
   
   //PORTB = (1*phases[counter] + 2*phases[counter-1] + 4*phases[counter-2]) & enableBits;
-  PORTD = phases[counter];
+  PORTB = phases[counter];
   counter++;
   if( counter >= 13*6 + 16*6)
     counter = 0;
