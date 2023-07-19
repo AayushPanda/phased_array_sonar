@@ -1,8 +1,8 @@
 // Rewritten for Arduino Mega 2560
 // byte results in faster execution
 
-// (6 bits per pulse * 16 cycles per burst) + (13 max bits of offset per TXR * 8 TXR)
-const int TXLength = 6*16 + 13*8;
+// 6 bits per wave
+const int TXLength = 6;
 const int c = 343; // speed of sound in m/s
 const int pitch = 0.01; // distance between TXR nodes in m
 
@@ -10,9 +10,9 @@ byte phases[TXLength];
 
 // Seperate function used for different signal patterns
 void genChannelBits(byte arr[], int bitShift){
-  for (int i = 0; i<16*6; i++) {
-    if (i%6 <= 2) {
-      arr[bitShift + i] = 1;
+  for (int i = 0; i<TXLength; i++) {
+    if (i%6 <= 2){
+        arr[(bitShift + i)%6] = 1;
     }
   }
 }
@@ -23,7 +23,7 @@ void genCompositeSignal(byte arr[], int bitDelay){
     for(int i=0; i<TXLength;i++){
         tmp[i] = 0;
     }
-    genChannelBits(tmp, txr*bitDelay);
+    genChannelBits(tmp, (txr*bitDelay)%6);
     for(int i=0; i<TXLength; i++){
       arr[i] += tmp[i]<<txr;
     }
@@ -60,6 +60,6 @@ byte counter = 0;
 ISR(TIMER2_COMPA_vect){
   PORTA = phases[counter];
   counter++;
-  if( counter >= 13*9 + 16*6)
+  if( counter >= TXLength)
     counter = 0;
 }
