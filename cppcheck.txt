@@ -1,4 +1,5 @@
-// Online C++ compiler to run C++ program online
+// To check patterns generated to write to AVR port registers
+
 #include <iostream>
 #include <bitset>
 

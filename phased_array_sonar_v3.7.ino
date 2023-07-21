@@ -67,6 +67,7 @@ void setup(){
   power_usart1_disable();
   power_usart2_disable();
   power_usart3_disable();
+  power_usart0_disable();
 
   // Interrupts occur at 25/6us intervals, so 6 interrupts per 40khz cycle
   genCompositeSignal(phases, 1);
