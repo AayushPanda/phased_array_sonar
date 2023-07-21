@@ -48,7 +48,7 @@ void setup(){
   TCCR2A = 0;               // clear settings
   TCCR2B = 0;               // clear settings
   TCNT2 = 0;                // counter start at 0
-  OCR2A = 1; // count 199 with CTC mode
+  OCR2A = clkspeed/f/2 - 1; // count 199 with CTC mode
   TCCR2A = 1 << WGM21;      // CTC mode
   TCCR2B = 1 << CS20;       // start clock, no prescaler (0b00000001)
   TIMSK2 |= (1 << OCIE2A);  // enable interrupt on compare match A
@@ -67,7 +67,7 @@ void setup(){
   power_usart1_disable();
   power_usart2_disable();
   power_usart3_disable();
-  power_usart0_disable();
+  //power_usart0_disable(); // comment out if using serial monitor, or if causes issues
 
   // Interrupts occur at 25/6us intervals, so 6 interrupts per 40khz cycle
   genCompositeSignal(phases, 1);
