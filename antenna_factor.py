@@ -10,9 +10,8 @@ wavelength = c / f  # wavelength
 period = 1 / f  #   
 
 # Array config
-pitch = 10 * 0.001  # distance between emission point
+pitch = 5 * 0.001  # distance between emission point
 kerf = 0.1 * 0.001  # distance between two adjacent elements
-element_width = 0.9 * 0.001  # width of each element
 n = 8 # number of elements
 phase_shift = 2*pi * 360/360 * 6/6 # phase shift between two adjacent elements
 array_width = (n - 1) * (pitch + kerf)

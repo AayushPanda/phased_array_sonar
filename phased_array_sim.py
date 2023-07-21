@@ -16,17 +16,17 @@ c = 343  # speed of sound
 f = 40000  # frequency
 wavelength = c / f  # wavelength
 period = 1 / f  #   
-pitch = 10 * 0.001  # distance between emission point
+pitch = 5 * 0.001  # distance between emission point
 kerf = 0.1 * 0.001  # distance between two adjacent elements
 element_width = 0.9 * 0.001  # width of each element
 n = 8 # number of elements
-phase_shift = 2*pi * 360/360 * 6/6 # phase shift between two adjacent elements
+phase_shift = 2*pi * 360/360 * 2/6 # phase shift between two adjacent elements
 metresperpixel = 0.0001  # metres per pixel
 array_width = (n - 1) * (pitch + kerf)
 
 # Creating intensity heatmap, with antenna centre at bottom centre of the image
 
-simwidth = 1 # width of the simulation area in metres
+simwidth = 0.5 # width of the simulation area in metres
 simheight = 0.5  # height of the simulation area in metres
 
 plot_width = int(simwidth/metresperpixel)
