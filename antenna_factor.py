@@ -13,7 +13,7 @@ period = 1 / f  #
 pitch = 5 * 0.001  # distance between emission point
 kerf = 0.1 * 0.001  # distance between two adjacent elements
 n = 8 # number of elements
-phase_shift = 2*pi * 360/360 * 6/6 # phase shift between two adjacent elements
+phase_shift = 2*pi * 360/36/6 # phase shift between two adjacent elements
 array_width = (n - 1) * (pitch + kerf)
 
 # Simulation config
