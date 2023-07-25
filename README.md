@@ -3,6 +3,13 @@
 Ongoing development of a phased sonar array, which will allow for precise beamforming and scanning on a 2-d plane orthogonal to the element axis.
 Simply reconfigurating constants should allow for use in radiowaves, or other wave-like emissions.
 
+Since the beam is steered without moving the actual array, one can perform beamsteering with no delay caused by mechanical components.
+Such an array can also be used for
+- Segmented array scanning: breaking up the array on the logic level into multiple arrays, so multiple beams can be formed
+- Point focusing: focusing all radiated energy on a point
+- Particle levitation: by creating vortex-like pressure geometries, light particles can be "trapped" between high pressure zones
+- Scanning: by listening to returns from a radiated beam, a detailed scan of an area can be performed without moving the array
+
 A waveguide is used to reduce inter-element distance (pitch) to near wavelength/2, to reduce amplitude of grating lobes.
 
 Project is currently built around the AVR RISC architecture, but will be migrating to a 32-bit architecture soon.
