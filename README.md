@@ -5,19 +5,30 @@ Simply reconfigurating constants should allow for use in radiowaves, or other wa
 
 A waveguide is used to reduce inter-element distance (pitch) to near wavelength/2, to reduce amplitude of grating lobes.
 
-8 transducer prototype with waveguide
-![image](https://github.com/AayushPanda/phased_array_sonar/assets/60160845/211afd52-9c3b-4b6e-87f0-a27fe476a3e0)
+Project is currently built around the AVR RISC architecture, but will be migrating to a 32-bit architecture soon.
+
+# Pictures and plots
+
+ **8 transducer prototype with waveguide**
+ 
+![image](https://github.com/AayushPanda/phased_array_sonar/assets/60160845/d83ef8ad-6bc6-4554-b286-ce1168d3049b)
 
 Simulated antenna factor at 0.5m, without any phase shift (note small side lobes)
-![Figure_1](https://github.com/AayushPanda/phased_array_sonar/assets/60160845/08e518bf-f7b1-45b8-bdbb-2fe78cf626af)
+
+![Figure_12](https://github.com/AayushPanda/phased_array_sonar/assets/60160845/b7f19983-3ce3-42bb-87c7-e1d37211ba1c)
 
 2D amplitude pattern generated without any phase shift, note directivity of beam with no steering (i.e. on the physical boresight)
-![Figure_2](https://github.com/AayushPanda/phased_array_sonar/assets/60160845/fd5dc6d1-47d1-4e0f-b0bf-98133aa2164a)
+
+![Figure_12](https://github.com/AayushPanda/phased_array_sonar/assets/60160845/ea3b2178-9cd0-47b9-9818-ef9d2e731e50)
 
 Simulated antenna factor at 0.5m, with inter-element phase shift of 60degrees (generated using antenna_factor.py)
 Note the steering of the main radiation lobe.
-![Figure_3](https://github.com/AayushPanda/phased_array_sonar/assets/60160845/3d668396-e274-4c4c-b532-34e827656b7e)
+
+![Figure_12](https://github.com/AayushPanda/phased_array_sonar/assets/60160845/623210e7-9046-40c0-9af6-2a8658f3f199)
 
 2D amplitude pattern for the same configuration (V marks aperture at end of waveguide, generated using phased_array_sim.py)
-![Figure_4](https://github.com/AayushPanda/phased_array_sonar/assets/60160845/88eac91d-604f-4696-a835-00bc58f6a6e2)
+
+![Figure_12](https://github.com/AayushPanda/phased_array_sonar/assets/60160845/b6efb56c-6e37-46dd-a826-a42863ac8a15)
+
+
 
