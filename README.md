@@ -1,4 +1,4 @@
-# phased_array_sonar
+# phased_array_sonar (outdated for IP reasons, will be updated after patent approval)
 
 Ongoing development of a phased sonar array, which will allow for precise beamforming and scanning on a 2-d plane orthogonal to the element axis.
 Simply reconfigurating constants should allow for use in radiowaves, or other wave-like emissions.
