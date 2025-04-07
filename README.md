@@ -12,7 +12,9 @@ Such an array can also be used for
 
 A waveguide is used to reduce inter-element distance (pitch) to near wavelength/2, to reduce amplitude of grating lobes.
 
-Project is currently built around the AVR RISC architecture, but will be migrating to a 32-bit architecture soon.
+~~Project is currently built around the AVR RISC architecture, but will be migrating to a 32-bit architecture soon.~~
+Now works on xtensa microcontrollers that have much higher clock freq.
+Also now has a pin that outputs angle in some analog form, so I get a radar chart on the oscilloscope in x-y mode
 
 # Pictures and plots
 
