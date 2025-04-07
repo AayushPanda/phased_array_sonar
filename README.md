@@ -3,6 +3,8 @@
 Ongoing development of a phased sonar array, which will allow for precise beamforming and scanning on a 2-d plane orthogonal to the element axis.
 Simply reconfigurating constants should allow for use in radiowaves, or other wave-like emissions.
 
+Project also has a small and crude phased array sim suite I use for debugging stuff sometimes.
+
 Since the beam is steered without moving the actual array, one can perform beamsteering with no delay caused by mechanical components.
 Such an array can also be used for
 - Segmented array scanning: breaking up the array on the logic level into multiple arrays, so multiple beams can be formed
